@@ -1,0 +1,68 @@
+#include <iomanip>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main ()
+{
+
+	float area,a_house,a_new;
+	double l,w,a_charge,t_charge,total,discount,h_l,h_w,time;
+	cout << " Welcome to X Lawn Mowing Service" << endl;
+	cout << "----------------------------------------------------"<< endl;
+	cout << "|                                                  |"<< endl;
+	cout << "|                                                  |"<< endl;
+	cout << "|               --------------------               |"<< endl;
+	cout << "|              |                   |               |"<< endl;
+	cout << "|              |                   |               |"<< endl;
+	cout << "|              |    YOUR HOUSE     |     YOUR LAWN |"<< endl;
+	cout << "|              |                   |               |"<< endl;
+	cout << "|              |                   |               |"<< endl;
+	cout << "|               --------------------               |"<< endl;
+	cout << "|                                                  |"<< endl;	
+	cout << "----------------------------------------------------"<< endl;
+	cout << "The diagram above is an example your lawn" << endl;
+	cout << endl;
+	
+	cout << "If you want to determine the cost of our service please enter the length and width of your lawn"<< endl;
+	cout << endl;
+	cout << "Enter the length of the yard:";
+	cin >> l;
+
+	cout << "Enter the width of the yard:";
+	cin >> w;
+	area= l*w;
+	cout << endl;
+	
+	cout <<"Great now we got the area of the lawn, which is "<<w<<"ft * "<< l<<"ft = "<< area <<"ft "<<endl;
+	cout << endl;
+	cout << "Now enter in the lenght and width of your house"<<endl;
+	cout << "Enter the lenght of your house:";
+	cin >> h_l;
+	cout << "Enter the width of your house:";
+	cin >> h_w;
+	a_house= h_w*h_l;
+	cout <<"It seems that the area that your house cover is "<<h_l<<"ft * "<<h_w<<"ft = "<< a_house<<"ft "<<endl;
+	a_new=area-a_house;
+	cout << endl;
+	
+	cout <<fixed<<"Now we subtract the area of the house from the lawn to find the workable area " << area<<"ft - "<< a_house << "ft = " << a_new <<"ft "<< setprecision(2) << endl;
+	a_charge= a_new*0.15;
+	cout << "We will charge RM0.15 for every square feet of your yard. Therefore,"<< endl;
+	cout << "This translate into "<< a_new <<"ft * RM0.15 = RM"<< a_charge<< endl;
+	cout <<fixed<<"The charge of the service for area covered will be RM"<<a_charge << endl;
+	cout << endl;
+	time= a_new/2/3600;
+	cout <<"The charge also include charge of RM60 per hour work rate. "<< endl;
+	cout <<"According to our estimation the the time taken will be "<< time <<"hours"<< endl;
+	t_charge= a_new/2/3600*60;
+	cout <<"The charge for workhours will be "<<time<< "hours * RM60 = RM" << t_charge << setprecision(2)<<endl;
+	total=a_charge +t_charge;
+	cout <<fixed<<"The total we will charge for our service wil be RM"<<a_charge <<" + RM" <<t_charge<<" = RM"<<total<<setprecision(2)<<endl;
+	cout <<endl;
+	discount = total*0.9;
+	cout << fixed <<"Enjoy a 10% customer discount with our service "<< endl;
+	cout << fixed <<"The total for the billing will be charged as follows: RM"<<total<<" *10% = RM"<<discount<<setprecision(2)<<endl; 
+	return 0;
+}
