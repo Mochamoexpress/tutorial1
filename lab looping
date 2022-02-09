@@ -1,0 +1,23 @@
+#include <iomanip>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{	double x,limit,d,g,t_d;
+	x=0;
+	t_d=0;
+	cout<<"Enter the time period where the ball falls in seconds:"<<endl;
+	cin>>limit;
+	cout<<"Time		Distance in current interval			Total distance"<<endl;
+	while (x<=limit)
+{
+	g=32;
+	d=0.5*g*pow(x,2);
+	t_d=t_d+d;
+	cout<<x<<"			"<<d<<"						"<<t_d<<endl;
+	x=x+1;
+}
+	cout<<endl;
+	cout<<"The total distance travel is by the ball is "<<t_d<<endl;
+}
