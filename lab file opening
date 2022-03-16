@@ -1,0 +1,32 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cmath>
+#include <sstream>
+
+using namespace std;
+void simple_tokenizer(string s)
+{
+    stringstream ss(s);
+    int i,des[100],adult[100],child[100],total[100];
+    while (i=0; ss >> des[i];i++){
+        cout << des[i]<< endl;
+}
+}
+int main (){
+	string strings;
+	fstream myFile;
+	myFile.open("vacation.txt", ios::in);
+	if (myFile.is_open()){
+		string line,vaca;
+		string arr[100];
+		while (getline(myFile,line)){
+			vaca=line;
+		
+		simple_tokenizer(line);
+		cout<<endl;
+		}
+		
+		myFile.close();
+	}
+}
