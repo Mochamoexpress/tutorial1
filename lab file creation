@@ -1,0 +1,35 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+
+using namespace std;
+int main (){
+
+double t_fam;
+int i,des[100],adult[100],child[100],total[100];
+i=1;
+cout<<"The total number of family on vacation: ";
+cin>>t_fam;	
+cout<<"[1]Tioman,[2]Langkawi, [3]Rendang"<<endl;
+while (i<=t_fam){
+	cout<<"Enter the vacational choice: ";
+	cin>> des[i];
+	cout<<"Enter the number adult that will be joing the joining the trip: ";
+	cin>> adult[i];
+	cout<<"Enter the number children that will be joining the trip: ";
+	cin>>child[i];
+	total[i]=child[i]+adult[i];
+	i++; 
+
+}
+	ofstream outfile;
+	outfile.open("vacation.txt");
+    for (i = 1; i <= t_fam;i++) {
+        outfile << des[i] <<" ";
+        outfile << adult[i] <<" ";
+        outfile <<child[i] <<" ";
+        outfile <<total[i] <<" "<<endl;
+    }
+    outfile.close();
+}
